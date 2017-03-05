@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_single_movie"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="com.example.shubham.popularmovies.Utillities.SingleMovieActivity">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/tv_movie_title"
+        android:textSize="20sp"
+        android:background="@android:color/darker_gray"
+        android:gravity="center"
+
+        />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/iv_single_movie_view"
+        android:layout_below="@id/tv_movie_title"
+        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/iv_single_movie_view"
+        android:layout_below="@id/tv_movie_title"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_movie_rating"
+            android:text="@string/movie_user_rating"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_movie_rating"
+            android:id="@+id/tv_movie_release_date"
+            android:text="@string/release_date"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_favourites_button"
+            android:layout_below="@id/tv_movie_release_date"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_movie_overview_title"
+        tools:text="Hello"
+        android:text="@string/overview_title"
+        android:fontFamily="sans-serif"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/iv_single_movie_view"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_movie_overview_title"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_movie_overview"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_movie_description"
+            android:gravity="center"
+            />
+    </ScrollView>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_trailers_desc"
+        tools:text="Hello"
+        android:text="@string/trailers_title"
+        android:fontFamily="sans-serif"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tv_movie_overview"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_trailers_movie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_trailers_desc"
+        android:layout_marginTop="10dp"
+        tools:listitem="@layout/activity_single_movie_videos_layout"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_reviews_title"
+        tools:text="Hello"
+        android:text="@string/reviews_title"
+        android:fontFamily="sans-serif"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/recyclerview_trailers_movie"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_reviews_movie"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_reviews_title"/>
+
+
+
+
+</RelativeLayout>
+ </ScrollView>
